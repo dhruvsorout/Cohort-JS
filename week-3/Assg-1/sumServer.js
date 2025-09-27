@@ -13,5 +13,19 @@ app.get("/sum", (req, res) => {
     res.send(sum.toString());
 })
 
+app.get("/interest", (req, res) => {
+    const principle = parseInt(req.query.principle);
+    const rate = parseInt(req.query.rate);
+    const time = parseInt(req.query.time);
+
+    const interest = (principle*rate*time)/100;
+    const total = principle + interest
+
+    res.json({
+        total: total,
+        interest: interest
+    })
+})
+
 
 app.listen(3001)
