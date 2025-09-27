@@ -6,13 +6,10 @@
     <title>DOM</title>
 </head>
 <body>
-    <input type="text" name="" id="num1" placeholder="FirstNumber">
+    <input oninput="debounceCalculateSum()" type="text" name="" id="num1" placeholder="FirstNumber">
     <br>
     <br>
-    <input type="text" name="" id="num2" placeholder="SecondNumber">
-    <br>
-    <br>
-    <button onclick="calculateSum2()">Calculate Sum</button>
+    <input oninput="debounceCalculateSum()" type="text" name="" id="num2" placeholder="SecondNumber">
     <br>
     <br>
     <div id="finalSum"></div>
